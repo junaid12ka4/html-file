@@ -1,0 +1,28 @@
+*{
+    text-decoration: none;
+}
+
+
+.navbar li {
+    list-style: none;
+    text-decoration: none;
+    font-style: italic;
+    display: inline-block;
+    
+    padding: 5px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    background-color: blue;
+    
+    }
+    .navbar a{
+        color: #ffffff;
+    }
+
+    .navbar ul {
+       /* padding: 0px 200px 0px 0px;*/
+    }

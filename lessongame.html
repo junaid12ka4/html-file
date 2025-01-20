@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <p>game</p>
+        <div class="design">
+            <button
+             onclick="
+             
+             playerMove('rock'), console.log(computerMove); " >rock</button>
+           
+            <button onclick=" playerMove('paper'); " >paper</button>
+            
+             <button onclick=" playerMove('secer'); " >secer</button>
+            
+            </div>
+    </header>
+
+
+    <script>
+
+            function playerMove(playgame){
+
+                const computerMove = pickComputerMove();
+
+                let reset = '';
+
+                if( playgame === 'rock' ){
+
+                if(computerMove === 'rock')
+                {
+                    result = 'tie.'
+                }
+                else if (computerMove ==='paper')
+                {
+                    result = 'lose.'
+                }
+                else if (computerMove ==='secer')
+                {
+                    result = 'win.'
+                }
+
+            }else if(playgame === 'paper' ){
+
+                if(computerMove === 'rock')
+                {
+                    result = 'win.'
+                }
+                else if (computerMove ==='paper')
+                {
+                    result = 'tie.'
+                }
+                else if (computerMove ==='secer')
+                {
+                    result = 'lose.'
+                }
+            
+            } else if (playgame === 'secer'){
+
+                if(computerMove === 'rock')
+                {
+                    result = 'lose.'
+                }
+                else if (computerMove ==='paper')
+                {
+                    result = 'win.'
+                }
+                else if (computerMove ==='secer')
+                {
+                    result = 'tie.'
+                }
+
+            }
+            alert(`you choice ${playgame} computer. choice ${computerMove} result is ${result}`);
+
+        }
+                
+              
+
+            function pickComputerMove(){
+
+                const randomNumber = Math.random();
+                
+                    if
+                    (randomNumber >= 0 &&  randomNumber < 1 / 3)
+                     {computerMove = 'rock'}
+                     else if
+                     (randomNumber >= 1 /3 && randomNumber < 2 / 3)
+                     { computerMove = 'paper'}
+                     else if
+                     (randomNumber >= 2 / 3 && randomNumber < 1 )
+                     { computerMove = 'secer'}     
+
+                     return computerMove;
+
+                    
+            }
+
+    </script>
+
+
+
+
+
+</body>
+
+
+
+</html>
